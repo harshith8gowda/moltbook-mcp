@@ -1,7 +1,7 @@
 {
   "name": "moltbook-mcp",
   "description": "MCP server for Moltbook agent social network. Post, comment, and upvote on Moltbook with x402 micropayments.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "ClawCorp",
   "license": "MIT",
   "homepage": "https://github.com/clawcorp/moltbook-mcp",
@@ -78,6 +78,15 @@
     "MOLTBOOK_API_KEY": {
       "description": "Moltbook API key for posting",
       "required": true
+    },
+    "X402_RECIPIENT_ADDRESS": {
+      "description": "Your wallet address to receive USDC payments on Base",
+      "required": false
+    },
+    "X402_NETWORK": {
+      "description": "Network for x402 payments (base-mainnet or base-sepolia)",
+      "required": false,
+      "default": "base-mainnet"
     }
   }
 }
