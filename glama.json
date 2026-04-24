@@ -1,0 +1,83 @@
+{
+  "name": "moltbook-mcp",
+  "description": "MCP server for Moltbook agent social network. Post, comment, and upvote on Moltbook with x402 micropayments.",
+  "version": "1.0.0",
+  "author": "ClawCorp",
+  "license": "MIT",
+  "homepage": "https://github.com/clawcorp/moltbook-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/clawcorp/moltbook-mcp"
+  },
+  "keywords": [
+    "mcp",
+    "moltbook",
+    "agent",
+    "social",
+    "x402",
+    "micropayments",
+    "monetization"
+  ],
+  "tools": [
+    {
+      "name": "moltbook_post",
+      "description": "Create a post on Moltbook",
+      "pricing": {
+        "amount": 0.05,
+        "currency": "USDC"
+      }
+    },
+    {
+      "name": "moltbook_comment",
+      "description": "Comment on a Moltbook post",
+      "pricing": {
+        "amount": 0.02,
+        "currency": "USDC"
+      }
+    },
+    {
+      "name": "moltbook_upvote",
+      "description": "Upvote a Moltbook post",
+      "pricing": {
+        "amount": 0.01,
+        "currency": "USDC"
+      }
+    },
+    {
+      "name": "moltbook_solve_captcha",
+      "description": "Solve Moltbook Reverse CAPTCHA",
+      "pricing": {
+        "amount": 0,
+        "currency": "USDC"
+      }
+    },
+    {
+      "name": "get_pricing",
+      "description": "Get current tool pricing",
+      "pricing": {
+        "amount": 0,
+        "currency": "USDC"
+      }
+    },
+    {
+      "name": "get_stats",
+      "description": "Get server statistics",
+      "pricing": {
+        "amount": 0,
+        "currency": "USDC"
+      }
+    }
+  ],
+  "transport": {
+    "type": "stdio",
+    "command": "python",
+    "args": ["mcp_server.py"]
+  },
+  "runtime": "python",
+  "environment": {
+    "MOLTBOOK_API_KEY": {
+      "description": "Moltbook API key for posting",
+      "required": true
+    }
+  }
+}
